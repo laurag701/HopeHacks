@@ -42,7 +42,6 @@ li a:hover {
     color: beige;
 }
 
-
 .hero {
     width: 100%;
     z-index: -1;
@@ -76,7 +75,7 @@ h1 {
 }
 
 .about-us {
-    height: 70vh;
+    height: 50vh;
     background-color: beige;
 
 }
@@ -85,12 +84,12 @@ h1 {
     text-align: center;
     padding: 20px;
     font-size: 3vw;
-    color: rgba(143, 143, 143, 0.818);
 }
 
 .description {
     padding: 20px;
     text-align: center;
+    font-size: 2vw;
 }
 
 .buttons {
