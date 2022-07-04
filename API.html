@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -8,8 +9,9 @@
     <link rel="stylesheet" href="api-page.css">
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
     <!-- CSS only -->
-<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
-    
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+
 
 </head>
 
@@ -32,88 +34,95 @@
     </nav>
 </header>
     <!-- NAV BAR END -->
-        
 
 
 
 
 
 
-        <section class="wrapper">
-            <!-- <div class="mini-cards m-md">
+
+    <section class="wrapper">
+        <!-- <div class="mini-cards m-md">
                 <section class="framer">
                     <iframe className="greatschools" src="//www.greatschools.org/widget/map?textColor=0066B8&borderColor=FFCC66&lat=33.9102261&lon=-84.1804384&cityName=Norcross&state=GA&normalizedAddress=Norcross%2C%20GA%2030093%2C%20USA&width=640&height=500&zoom=13" width="640" height="500" marginHeight="0" marginWidth="0" frameBorder="0" scrolling="no"></iframe><script type="text/javascript">var _gsreq = new XMLHttpRequest();var _gsid = new Date().getTime();_gsreq.open("GET", "https://www.google-analytics.com/collect?v=1&tid=UA-54676320-1&cid="+_gsid+"&t=event&ec=widget&ea=loaded&el="+window.location.hostname+"&cs=widget&cm=web&cn=widget&cm1=1&ni=1");_gsreq.send();</script>
                 </section>
                 <div class="wording"> 
                      <h1> test test</h1>
                 </div> -->
-            </div> 
+        </div>
 
-            <div class="carded">
-                <nav>
-                    <div class="nav nav-tabs" id="nav-tab" role="tablist">
-                            <button class="nav-link active" id="nav-home-tab" data-bs-toggle="tab" data-bs-target="#nav-home" type="button" role="tab" aria-controls="nav-home" aria-selected="true">Map</button>
-                            <button class="nav-link" id="nav-profile-tab" data-bs-toggle="tab" data-bs-target="#nav-profile" type="button" role="tab" aria-controls="nav-profile" aria-selected="false">Schools</button>
-                            <button class="nav-link" id="nav-contact-tab" data-bs-toggle="tab" data-bs-target="#nav-contact" type="button" role="tab" aria-controls="nav-contact" aria-selected="false">Search</button>
-                    </div>
-                </nav>
-                <div class="tab-content" id="nav-tabContent">
-                    <div class="tab-pane fade show active" id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab">
-                            mjbmbbbnbnm
-                    </div>
-                    <div class="tab-pane fade" id="nav-profile" role="tabpanel" aria-labelledby="nav-profile-tab">
-                        <div id="search-result">
-                            <ul id="search-list"></ul>
-                        </div>
-                    </div>
-                    <div class="tab-pane fade" id="nav-contact" role="tabpanel" aria-labelledby="nav-contact-tab">
-                       
-                            <div class="m-5">
-                                <label for="exampleInputEmail1" class="form-label">Find The Perfect School</label>
-                                <div id="text" class="form-text">Find the top schools by city and state, zip code, or address</div>
-                                <input type="text" name="school" id="school-searching" class="form-control" id="text" aria-describedby="textmess">
-                                <button  onclick="getSchools()" class="mt-2 btn btn-primary">Go</button>
-                            </div>
-                            
-                           
-                        
-                    </div>
-                        
-                    </div>
-                    <div class="card-body">
-
-                        
+        <div class="carded">
+            <nav>
+                <div class="nav nav-tabs" id="nav-tab" role="tablist">
+                    <button class="nav-link active" id="nav-home-tab" data-bs-toggle="tab" data-bs-target="#nav-home"
+                        type="button" role="tab" aria-controls="nav-home" aria-selected="true">Map</button>
+                    <button class="nav-link" id="nav-profile-tab" data-bs-toggle="tab" data-bs-target="#nav-profile"
+                        type="button" role="tab" aria-controls="nav-profile" aria-selected="false">Schools</button>
+                    <button class="nav-link" id="nav-contact-tab" data-bs-toggle="tab" data-bs-target="#nav-contact"
+                        type="button" role="tab" aria-controls="nav-contact" aria-selected="false">Search</button>
+                </div>
+            </nav>
+            <div class="tab-content" id="nav-tabContent">
+                <div class="tab-pane fade show active" id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab">
+                    mjbmbbbnbnm
+                </div>
+                <div class="tab-pane fade" id="nav-profile" role="tabpanel" aria-labelledby="nav-profile-tab">
+                    <div id="search-result">
+                        <ul id="search-list"></ul>
                     </div>
                 </div>
-            </div>
-        </section>
-      
+                <div class="tab-pane fade" id="nav-contact" role="tabpanel" aria-labelledby="nav-contact-tab">
 
-<!-- footer section -->
-<div class ="footer-container">
-    <div class ="footer">
-      <div class ="footer-heading footer-1">
-     <h2>Contact Us</h2>
-        <a href="Contact.html">Email</a>
-        <a href="Contact.html">Phone</a>
-      </div>
-       <div class ="footer-heading footer-2">
-        <h2>Social Medias!</h2>
-        <a href="https://www.instagram.com/laurraaag/">Instagram</a>
-        <a href="https://twitter.com/explore">Twitter</a>
-        <a href="https://www.facebook.com/">Facebook</a>
-        <a href="https://www.linkedin.com/login">LinkedIn</a>
-      </div>
-      <div class ="footer-email-form">
-        <h2>Join Our Newsletter</h2>
-        <input type="email" id="email"
-          placeholder="Enter Email address" id="footer-email">
-        <input type="submit" value="Sign Up" id="footer-email-btn">
-      </div>
-      </div>
-<!-- End footer section -->
-        
-<!-- JavaScript Bundle with Popper -->
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
+                    <div class="m-5">
+                        <label for="exampleInputEmail1" class="form-label">Find The Perfect School</label>
+                        <div id="text" class="form-text">Find the top schools by city and state, zip code, or address
+                        </div>
+                        <input type="text" name="school" id="school-searching" class="form-control" id="text"
+                            aria-describedby="textmess">
+                        <button onclick="getSchools()" class="mt-2 btn btn-primary">Go</button>
+                    </div>
+
+
+
+                </div>
+
+            </div>
+            <div class="card-body">
+
+
+            </div>
+        </div>
+        </div>
+    </section>
+
+
+    <!-- footer section -->
+    <div class="footer-container">
+        <div class="footer">
+            <div class="footer-heading footer-1">
+                <h2>Contact Us</h2>
+                <a href="Contact.html">Email</a>
+                <a href="Contact.html">Phone</a>
+            </div>
+            <div class="footer-heading footer-2">
+                <h2>Social Medias!</h2>
+                <a href="https://www.instagram.com/laurraaag/">Instagram</a>
+                <a href="https://twitter.com/explore">Twitter</a>
+                <a href="https://www.facebook.com/">Facebook</a>
+                <a href="https://www.linkedin.com/login">LinkedIn</a>
+            </div>
+            <div class="footer-email-form">
+                <h2>Join Our Newsletter</h2>
+                <input type="email" id="email" placeholder="Enter Email address" id="footer-email">
+                <input type="submit" value="Sign Up" id="footer-email-btn">
+            </div>
+        </div>
+        <!-- End footer section -->
+
+        <!-- JavaScript Bundle with Popper -->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2"
+            crossorigin="anonymous"></script>
 </body>
+
 </html>
