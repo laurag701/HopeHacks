@@ -22,8 +22,7 @@
       <ul>
         <li><a href="homepage.html">Home</a></li>
         <li>About us</li>
-        <li>API</li>
-        <li>API</li>
+        <li>Assistance</li>
         <li><a href="contact.html">Contact</a></li>
       </ul>
     </nav>
@@ -36,23 +35,23 @@
   </div>
 
   <div id="overlay">
-    <form onsubmit="event.preventDefault(); validateForm()">
+    <form>
       <h1>Contact Us</h1>
       <label for="name">Name:</label>
-      <input type="text" id="name" place holder="Your name" required>
-      <small class="error"></small>
+      <input type="text" id="fullName" place holder="Your name" required>
+    
 
       <label for="email">Email:</label>
       <input type="text" id="email" place holder="Your email" required>
-      <small class="error"></small>
+      
 
       <label for="message">Message:</label>
       <textarea id="message" place holder="Your message" rows="6"></textarea>
-      <small class="error"></small>
+      
 
       <div class="center">
-        <input type="submit" value="Send Message">
-        <p id="sucess"></p>
+    <button onclick="sendMail()">Send</button>
+      
       </div>
 
     </form>
