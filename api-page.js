@@ -14,7 +14,6 @@ const apiUrl = `${url}${type}/${id}`;
 //     const generateHtml = (data) => {
 //         console.log(data)
 //         console.log(data.schoolMatches[0])
-
 //     }
 
     const getSchools = async () => {
