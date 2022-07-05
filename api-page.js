@@ -20,7 +20,7 @@ const apiUrl = `${url}${type}/${id}`;
         try {
             let searchTerm = document.getElementById("school-searching").value;
             const schools = await axios.get(
-                `https://api.schooldigger.com/v2.0/autocomplete/schools?q=${searchTerm}&returnCount=5&appID=7b6332bf&appKey=55a9490dadd2e8a22422b901cf1ced67`
+                `https://api.schooldigger.com/v2.0/autocomplete/schools?q=${searchTerm}&returnCount=4&appID=7b6332bf&appKey=55a9490dadd2e8a22422b901cf1ced67`
             );
             // console.log(schools);
             // console.log(schools.data.schoolMatches);
@@ -40,14 +40,15 @@ const apiUrl = `${url}${type}/${id}`;
             console.log(list);
 
             list.forEach((data) => {
+                
                 document.getElementById("search-list").innerHTML += 
                 `
                 <li class="list-group-item d-flex justify-content-between align-items-start">
                     <div class="ms-2 me-auto">
                     <div class="fw-bold">${data.schoolName}</div>
-                    Content for list item
+                    <p> City: ${data.city}, State: ${data.state} </p>
                     </div>
-                    <span class="badge bg-primary rounded-pill">14</span>
+                    <span class="badge bg-primary rounded-pill">${data.rank}/${data.rankOf}</span>
                 </li>
                 `
             })
