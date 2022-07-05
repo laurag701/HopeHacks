@@ -2,6 +2,7 @@ const express = require('express');
 const app = express();
 const mongoose = require('mongoose');
 const bodyParser = require('body-parser')
+const path = require('path');
 
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json())
@@ -16,10 +17,10 @@ const contactSchema = {
     message: String
 }
 
-//create model using contactSchema
+//create model
 const contact = mongoose.model("contact", contactSchema)
 
-app.post("/", (req, res) => {
+app.post("/contact", (req, res) => {
     let newContact = new contact({
         name: req.body.name,
         email: req.body.email,
@@ -29,15 +30,15 @@ app.post("/", (req, res) => {
     res.redirect('/');
 })
 
-app.use(express.static(__dirname + '/views'));
 app.use(express.static(__dirname + '/public'));
 
 
 // for ejs files 
 app.set("view engine", "ejs")
 
-app.get('/', (req, res) => {
-    res.render('contact')
+//route
+app.get('/contact', (req, res) => {
+    res.sendFile(path.join(__dirname + '/contact.html'));
 })
 
 //importing users routers and set it to starts with 'users'
