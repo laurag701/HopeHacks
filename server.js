@@ -1,50 +1,48 @@
-const express = require("express");
+const express = require('express');
 const app = express();
-const mongoose = require("mongoose");
-const bodyParser = require("body-parser");
+const mongoose = require('mongoose');
+const bodyParser = require('body-parser')
 
+app.use(bodyParser.urlencoded({ extended: true }));
+app.use(bodyParser.json())
 
-mongoose.connect("mongodb+srv://PaginesHer:RSkF4TyWXLY9L5kJ@cluster0.leqz7ho.mongodb.net/?retryWrites=true&w=majority");
+//connect to database 
+mongoose.connect('mongodb+srv://hyeb96:Sm17emina@cluster0.yyfegbj.mongodb.net/hopehack', { useNewUrlParser: true }, { useUnifiedTopology: true })
 
-//create data schema
+//create schema 
+const contactSchema = {
+    name: String,
+    email: String,
+    message: String
+}
 
+//create model using contactSchema
+const contact = mongoose.model("contact", contactSchema)
 
-app.use(bodyParser.urlencoded({extended: true}));
-
-app.get("/", function(req,res){
-    res.sendFile(__dirname +"/contact.html");
-})
-
-//app.post
-app.post("/contact_form",(req,res)=>{
-    var name = req.body.name;
-    var email = req.body.email;
-    var message = req.body.message;
-   
-
-    var data = {
-        "name": name,
-        "email" : email,
-        "message": message,
-        
-    }
-    db.collection('users').insertOne(data,(err,collection)=>{
-        if(err){
-            throw err;
-        }
-        console.log("Record Inserted Successfully");
+app.post("/", (req, res) => {
+    let newContact = new contact({
+        name: req.body.name,
+        email: req.body.email,
+        message: req.body.message
     });
-
-    return res.redirect('contact.html')
-
+    newContact.save();
+    res.redirect('/');
 })
 
-app.get("/",(req,res)=>{
-    res.set({
-        "Allow-access-Allow-Origin": '*'
-    })
-    return res.redirect('contact.html');
-}).listen(3000);
+app.use(express.static(__dirname + '/views'));
+app.use(express.static(__dirname + '/public'));
 
 
-console.log("Listening on PORT 3000");
+// for ejs files 
+app.set("view engine", "ejs")
+
+app.get('/', (req, res) => {
+    res.render('contact')
+})
+
+//importing users routers and set it to starts with 'users'
+// const userRouter = require('./routes/users')
+// app.use('/users', userRouter)
+
+//create a server 
+app.listen(3000)
