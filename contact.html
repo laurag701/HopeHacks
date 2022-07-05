@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="contact.css">
+
+
+
+
+  <title>Contact Us</title>
+
+</head>
+
+<body>
+  <header>
+    <div>
+      <img id="logo" src="pics/logo.png" alt="logo">
+    </div>
+    <nav class="nav-bar">
+      <ul>
+        <li><a href="homepage.html">Home</a></li>
+        <li>About us</li>
+        <li><a href="API.html">Assistance</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+  <div class="hero-image">
+    <div class="hero-text">
+      <h1>Got Questions ?</h1>
+
+    </div>
+  </div>
+
+    
+      <h1>Contact Us</h1>
+      <form action="/contact" method="post">
+      <label for="name">Name:</label>
+      <input type="text" id="fullName" place holder="Your name" required>
+
+
+      <label for="email">Email:</label>
+      <input type="text" id="email" place holder="Your email" required>
+
+
+      <label for="message">Message:</label>
+      <textarea id="message" place holder="Your message" rows="6"></textarea>
+
+
+      <div class="center">
+
+    <button onclick="sendMail()">Send</button>
+  </form>
+
+        <button onclick="sendMail()">Send</button>
+
+
+      </div>
+
+    </form>
+  </div>
+  <div class="footer-container">
+    <div class="footer">
+      <div class="footer-heading footer-1">
+        <h2>Contact Us</h2>
+      </div>
+      <div class="footer-heading footer-2">
+        <h2>Follow Our Social Medias!</h2>
+        <a href="https://www.instagram.com/laurraaag/">Instagram</a>
+        <a href="https://twitter.com/explore">Twitter</a>
+        <a href="https://www.facebook.com/">Facebook</a>
+        <a href="https://www.linkedin.com/login">LinkedIn</a>
+      </div>
+      <div class="footer-email-form">
+        <h2>Join Our Newsletter</h2>
+        <input type="email" id="email" placeholder="Enter Email address" id="footer-email">
+        <input type="submit" value="Sign Up" id="footer-email-btn">
+      </div>
+    </div>
+</body>
+
+</html>
