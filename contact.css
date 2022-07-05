@@ -111,9 +111,17 @@ textarea:focus {
 .center {
   text-align: center;
 }
-.button{
-  co
-}
+button{
+  background: green;
+  width: 100px;
+	border: none;
+	outline: none;
+	color: white;
+	height: 35px;
+	border-radius: 30px;
+	margin-top: 20px;
+	box-shadow: 0px 5px 15px 0px rgba(28,0,181,0.2) ;
+
 
 }
 
@@ -134,69 +142,162 @@ input[type="submit"] {
   /* padding-bottom: 4rem; */
 }
 
-.footer {
-  width: 100%;
-  /* height: 40vh; */
-  background: #D9D9D9;
-  color: #0C0909;
-  display: flex;
-  justify-content: space-between;
-  /* flex-wrap: wrap; */
-  margin: 0 auto;
-  padding: 20px;
+.footer-responsive {
+  background-color: rgba(0, 0, 0, 0.415);
+  box-sizing: border-box;
+  widows: 100%;
+  text-align: center;
+  font: bold 16px san-serif;
+  padding: 10px 10px 20px 10px;
+  margin-top: 80px;
 }
 
-.footer-heading {
-  display: flex;
-  flex-direction: column;
-  margin-right: 4rem;
+.footer-responsive .footer-left,
+.footer-responsive .footer-center,
+.footer-responsive .footer-right {
+  display: inline-block;
+  vertical-align: top;
 }
 
-.footer-heading h2 {
-  margin-bottom: 2rem;
+.footer-responsive .footer-left {
+  width: 30%;
 }
 
-.footer-heading a {
-  color: #0E0C0C;
+.footer-responsive h3 {
+  color: white;
+  font: normal 36px 'cookie', cursive;
+  margin: 0;
+}
+
+/* .footer-responsive h3 span{
+  color:
+} */
+.footer-responsive .footer-links {
+  color: white;
+  margin: 20px 0 12px;
+}
+
+.footer-responsive .footer-links a {
+  display: inline-block;
+  line-height: 1.8;
   text-decoration: none;
-  margin-bottom: 0.5rem;
+  color: inherit;
 }
 
-.footer-heading a:hover {
-  color: #000;
-  transition: 0.3 ease-out;
+.footer-responsive .footer-company-name {
+  color: #8f9296;
+  font-size: 14px;
+  font-weight: normal;
+  margin: 0;
 }
 
-.footer-email-form h2 {
-  margin-bottom: 2rem;
+.footer-responsive .footer-center {
+  width: 35%;
+  font-family: 'Cairo', sans-serif;
+
 }
 
-#footer-email {
-  width: 250px;
-  height: 10px;
-  border-radius: 4px;
-  outline: none;
-  padding-left: 0.5rem;
-  font-size: 1rem;
-  margin-bottom: 1rem;
+.address,
+.phone,
+.email {
+  background-color: rgb(113, 170, 188);
+  color: white;
+  border: 2px solid rgb(255, 255, 255);
+  font-size: 25px;
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  text-align: center;
+  line-height: 42px;
+  margin: 10px 15px;
+  vertical-align: middle;
 }
 
-#footer-email::placeholder {
-  color: #090606;
+
+.address,
+.phone,
+.email {
+  height: 1.5rem;
+  width: 1.5rem;
+  font-size: 17px;
+  line-height: 38px;
+  text-align: center;
 }
 
-#footer-email-btn {
-  width: 100px;
-  height: 40px;
-  border-radius: 4px;
-  background-color: #f34242;
-  outline: none;
-  border: none;
-  font-size: 1rem;
+.footer-responsive .footer-center p {
+  display: inline-block;
+  color: white;
+  vertical-align: middle;
+  margin: 0;
 }
 
-#footer-email-btn:hover {
+.footer-responsive .footer-right {
+  width: 30%;
+
+}
+
+.footer-responsive .footer-about {
+  line-height: 20px;
+  color: white;
+  font-size: 13px;
+  font-weight: normal;
+  margin: 0;
+  font-family: 'Cairo', sans-serif;
+}
+
+.footer-responsive .footer-about span {
+  display: block;
+  color: #92999f;
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.footer-responsive .footer-icons {
+  margin-top: 25px;
+}
+
+.footer-responsive .footer-icons a {
+  display: inline-block;
+  width: 37.5px;
+  height: 36.5px;
   cursor: pointer;
-  background-color: #9E9B9B;
-  transition: all 0.4s ease-out;
+  background-color: #ffffff;
+  border: 2px solid white;
+  border-radius: 50%;
+  /* font-size: 20px; */
+  color: white;
+  text-align: center;
+  margin-right: 10px;
+  margin-bottom: 0px;
 }
+
+.footer-responsive .footer-icons a:hover {
+  background-color: steelblue;
+  border: 2px solid steelblue;
+
+}
+
+.footer-links a:hover {
+  color: steelblue;
+}
+
+@media(max-width:880px) {
+
+  .footer-responsive .footer-links,
+  .footer-responsive .footer-center,
+  .footer-responsive .footer-right {
+      display: block;
+      width: 100%;
+      margin-bottom: 40px;
+      text-align: center
+  }
+
+  .address,
+  .phone,
+  .email {
+      margin-left: 0;
+  }
+
+
+
